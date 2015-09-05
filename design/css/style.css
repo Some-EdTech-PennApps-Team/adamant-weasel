@@ -184,3 +184,35 @@ a .challenge-box-button {
 .challenge-details {
 	width: 90%;
 }
+<<<<<<< Updated upstream
+=======
+
+.table {
+	font-size: 14px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.grid {
+	width: 100%;
+}
+
+.grid-item {
+	width: 33.33333%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.submission-image {
+	width: 100%;
+	border: 5px;
+	border-radius: 5px;
+	padding-bottom: 5px;
+}
+
+.submission-caption {
+	font-size: 12px;
+}
+>>>>>>> Stashed changes
