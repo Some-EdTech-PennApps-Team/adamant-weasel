@@ -66,15 +66,15 @@
 }
 
 .class-element:hover {
-	text-decoration: none; 
+	text-decoration: none;
 	color: #ffffff;
 	background-color: #5C51A6;
 }
 
 .active .class-element {
-	text-decoration: none; 
+	text-decoration: none;
 	color: #ffffff;
-	background-color: #5C51A6;	
+	background-color: #5C51A6;
 }
 
 .class-button:hover{
@@ -135,7 +135,7 @@
 }
 
 .challenge-box {
-	width: 100%;	
+	width: 100%;
 	background-color: #F0F0F0;
 	height: 200px;
 	border-radius: 5px;

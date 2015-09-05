@@ -7,8 +7,9 @@ define([
     'templates',
     'collections/channels',
     'collections/challenges',
-    'views/challengeElement'
-], function ($, _, Parse, JST, Channels, Challenges, ChallengeElement) {
+    'views/challengeElement',
+    'views/channelElement'
+], function ($, _, Parse, JST, Channels, Challenges, ChallengeElement, ChannelElement) {
     'use strict';
 
     var DashboardView = Parse.View.extend({
@@ -23,31 +24,48 @@ define([
         events: {},
 
         initialize: function () {
-            _.bindAll(this, 'render', 'addOne', 'addAll');
+            _.bindAll(this, 'render', 'addOne', 'addAll', 'addOneChannel', 'addAllChannels');
             //this.render();
 
-            this.collection = new Challenges({});
-            this.collection.bind('reset', this.render);
+            this.challengeCollection = new Challenges({});
+            this.challengeCollection.bind('reset', this.addAll);
+
+            this.channelCollection = new Channels({});
+            this.channelCollection.bind('reset', this.addAllChannels);
+
+            this.render();
 
         },
 
+        addOneChannel: function (channel) {
+          var channelElement = new ChannelElement({model:channel});
+          this.$('#channels').append(channelElement.el);
+        },
+
+        addAllChannels: function () {
+          this.channelCollection.each(function(channel){
+              self.addOneChannel(channel);
+          })
+        },
+
         addOne: function (challenge) {
-            var challengeElement = new ChallengeElement({model:challenge})
+            var challengeElement = new ChallengeElement({model:challenge});
             this.$('#challenges').append(challengeElement.el);
         },
 
         addAll: function () {
             var self = this;
-            this.collection.each(function(challenge){
+            this.challengeCollection.each(function(challenge){
                 self.addOne(challenge);
             })
         },
 
-
         render: function () {
             this.$el.html(this.template());
-            this.addAll();
-            console.log(this.collection);
+            // this.addAll();
+            // this.addAllChannels();
+            console.log(this.channelCollection);
+            console.log(this.challengeCollection);
         }
     });
 
