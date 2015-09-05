@@ -6,7 +6,7 @@
     "testFramework": "mocha",
     "templateFramework": "lodash",
     "sassBootstrap": true,
-    "includeRequireJS": false
+    "includeRequireJS": true
   },
   "generator-mocha": {}
 }
