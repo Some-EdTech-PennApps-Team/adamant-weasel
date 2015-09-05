@@ -1,4 +1,6 @@
-*{font-family:Avenir Next;}
+*{
+	font-family: Avenir Next;
+}
 
 .btn-default {
 	background-color: #5C51A6;
@@ -40,4 +42,65 @@
 	border-color: #979797;
 	color: #979797;
 	opacity: 0.5;
+}
+
+#class-selection {
+	background-color: #F3F3F3;
+	height: 100%;
+	margin-top: -20px;
+}
+
+.class-selection-container {
+	padding-top: 20px;
+}
+
+.classes-header {
+	font-size: 20px;
+	color: #979797;
+	padding-top: 40px;
+}
+
+.class-button {
+	text-decoration: none;
+	color: #63626B;
+}
+
+.class-element:hover {
+	text-decoration: none; 
+	color: #ffffff;
+	background-color: #5C51A6;
+}
+
+.active .class-element {
+	text-decoration: none; 
+	color: #ffffff;
+	background-color: #5C51A6;	
+}
+
+.class-button:hover{
+	text-decoration: none;
+}
+
+.class-element {
+	width: 240px;
+	height: 50px;
+	background-color: #D8D8D8;
+	border-color: #979797;
+	border-radius: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.class-name {
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 6px;
+}
+
+.class-data {
+	font-size: 12px;
+	padding-left: 9px;
+	padding-right: 9px;
 }

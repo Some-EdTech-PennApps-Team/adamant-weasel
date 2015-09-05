@@ -4,6 +4,7 @@
 
 		<title>Challenge Up Teacher Portal</title>
 
+		<meta charset="ISO-8859-1">
 
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -41,36 +42,86 @@
 
 		<div class="container">
 
-			<h1>Create Challenge <small>Create a new challenge for your students to complete.</small></h1>
-			<hr>
+			<div class="row">
 
-			<form>
-				<div class="form-group">
-					<label for="challengeClass">Class Challenge Will Be In <span class="required">*</span></label>
-					<select class="form-control" id="challengeClass">
-					 	<option>Class 1</option>
-					 	<option>Class 2</option>
-					 	<option>Class 3</option>
-					</select>     				
+				<div class="col-md-3" id="class-selection">
+
+					<div class="class-selection-container">
+
+						<span class="classes-header">CLASSES</span>
+
+						<a class="class-button active" href="">
+
+							<div class="class-element">
+
+								<div class="class-name">4th Period Graphic Design</div>
+								<div class="class-data">2 Challenges &bull; 18 Students</div>
+
+							</div>
+
+						</a>
+
+
+						<a class="class-button" href="">
+
+							<div class="class-element">
+
+								<div class="class-name">4th Period Graphic Design</div>
+								<div class="class-data">2 Challenges &bull; 18 Students</div>
+
+							</div>
+
+						</a>
+
+
+						<a class="class-button" href="">
+
+							<div class="class-element">
+
+								<div class="class-name">4th Period Graphic Design</div>
+								<div class="class-data">2 Challenges &bull; 18 Students</div>
+
+							</div>
+
+						</a>
+
+					</div>
+
 				</div>
 
-				<div class="form-group">
-					<label for="challengeName">Challenge Name <span class="required">*</span></label>
-					<input type="text" class="form-control" id="challengeName" placeholder="">
+				<div class="col-md-9">
+
+					<form>
+						<div class="form-group">
+							<label for="challengeClass">Class Challenge Will Be In <span class="required">*</span></label>
+							<select class="form-control" id="challengeClass">
+								<option>Class 1</option>
+								<option>Class 2</option>
+								<option>Class 3</option>
+							</select>     				
+						</div>
+
+						<div class="form-group">
+							<label for="challengeName">Challenge Name <span class="required">*</span></label>
+							<input type="text" class="form-control" id="challengeName" placeholder="">
+						</div>
+
+						<div class="form-group">
+							<label for="challengeDescription">Challenge Description</label>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="challengeFileInput">Upload Challenge Image</label>
+							<input type="file" id="challengeFileInput">
+						</div>
+
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+
 				</div>
 
-				<div class="form-group">
-					<label for="challengeDescription">Challenge Description</label>
-					<textarea class="form-control" rows="3"></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="challengeFileInput">Upload Challenge Image</label>
-					<input type="file" id="challengeFileInput">
-				</div>
-
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			</div>
 
 		</div>
 
