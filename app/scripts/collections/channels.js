@@ -8,7 +8,12 @@ define([
     'use strict';
 
     var ChannelsCollection = Parse.Collection.extend({
-        model: Channel
+        model: Channel,
+
+        initialize: function(){
+          this.query = new Parse.Query('Channel');
+          this.fetch();
+        }
     });
 
     return ChannelsCollection;

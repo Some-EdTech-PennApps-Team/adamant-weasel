@@ -25,6 +25,14 @@ define([
             }
         },
 
+        toggleActive: function(active) {
+            if (active) {
+              this.$('.class-button').addClass('active');
+            } else {
+              this.$('.class-button').removeClass('active');
+            }
+        },
+
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
         }

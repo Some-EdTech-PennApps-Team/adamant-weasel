@@ -1,52 +1,44 @@
 <div class="row">
 
   <div class="col-md-3" id="class-selection">
-
     <div class="class-selection-container">
-
       <span class="classes-header">CLASSES</span>
-
       <div id="channels"></div>
-
-      </a>
-
     </div>
-
     <a class="add-class-link" href="create_class.html">+ Add New Class</a>
-
   </div>
 
   <div class="col-md-9">
 
-    <p><span class="class-name-header">4th Period Graphic Design</span><br>2 Challenges &bull; 18 Students &bull; <a href="" class="special-a">Edit Class</a></p>
+    <p><span class="class-name-header"><%- channel.channelName %></span><br>2 Challenges &bull; 18 Students &bull; <a href="" class="edit-class-link">Edit Class</a></p>
 
-    <form>
-      <div class="form-group">
-        <label for="challengeClass">Class Challenge Will Be In <span class="required">*</span></label>
-        <select class="form-control" id="challengeClass">
-          <option>Class 1</option>
-          <option>Class 2</option>
-          <option>Class 3</option>
-        </select>
+    <div id="challenges">
+
+    <a class="challenge-box-button" href="">
+
+      <div class="challenge-box">
+
+        <div class="challenge-details">
+
+          <span class="challenge-title">Shadow Challenge</span><br>
+          <span class="challenge-subhead">18 / 36 Students Responded</span><br>
+          <p class="challenge-description">Take a photograph that uses shadow in an interesting way. Use your creativity. This is an indoor challenege. Use what we learned in class: remember, the shadow should add to the photograph. First person to submit gets 10 point of extra credit in class. Best use of shadow gets 50 points of extra credit.</p>
+
+        </div>
+
       </div>
 
-      <div class="form-group">
-        <label for="challengeName">Challenge Name <span class="required">*</span></label>
-        <input type="text" class="form-control" id="challengeName" placeholder="">
-      </div>
+    </a>
 
-      <div class="form-group">
-        <label for="challengeDescription">Challenge Description</label>
-        <textarea class="form-control" rows="3"></textarea>
-      </div>
+    <!-- Current Challenge(s) go(es) here -->
 
-      <div class="form-group">
-        <label for="challengeFileInput">Upload Challenge Image</label>
-        <input type="file" id="challengeFileInput">
-      </div>
+    <a href="create_challenge.html"><button class="btn btn-default">Add New Challenge</button></a>
 
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+    <hr>
+
+    <!-- Past challenges go here -->
+
+  </div>
 
   </div>
 
