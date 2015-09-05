@@ -19,7 +19,11 @@ define([
       className: '',
 
       events: {
-        'submit form': 'submitChallenge'
+        'submit form': 'submitChallenge',
+        'change #promptImage': 'updateImage',
+        'change #challengeTitle': 'updatePreview',
+        'change #promptText': 'updatePreview',
+        'change #promptText': 'updatePreview'
       },
 
       initialize: function (options) {
@@ -34,8 +38,6 @@ define([
       render: function () {
         
         var channels = this.channels.toJSON();
-        console.log("RENDER CALLED", channels);
-
         this.$el.html(this.template({
           channels: channels
         }));
@@ -57,16 +59,31 @@ define([
         challenge.set('challengeTitle', challengeTitle);
         challenge.set('promptText', promptText);
         challenge.set('channel', selectedChannel);
-        
+
         challenge.save( null, {
           success: function(result) {
-            console.log("SAVED");
             self.saveImage(result);
           },
           error: function() {
 
           }
         });
+      },
+
+      updateImage: function() {
+        var self = this;
+        var fileUploadControl = this.$("#promptImage")[0];
+        if (fileUploadControl.files.length > 0) {
+          var file = fileUploadControl.files[0];
+          var name = file.name;
+          var promptImageFile = new Parse.File(name, file);
+
+          promptImageFile.save().then(function(savedFile) { 
+            var img = '<img class="image-preview" src="'+savedFile.url()+'" />';
+            console.log("IMG", img);
+            self.$('#imagePreview').append(img);
+          });
+        };
       },
 
       saveImage: function(challenge){
@@ -82,6 +99,22 @@ define([
              challenge.save();
           });
         }
+      },
+
+      updatePreview: function() {
+        var challengeTitle = this.$('#challengeTitle').val();
+        var promptText = this.$('#promptText').val();
+        var promptImage = this.$('#promptImage').val();
+        var channelId = this.$('#channelSelect').val();
+        var selectedChannel =this.channels.get(channelId);
+
+        console.log(channelId);
+        console.log(selectedChannel);
+
+        this.$("#title-preview").html(challengeTitle);
+        this.$("#prompt-preview").html(promptText);
+        this.$("#channel-preview").html(selectedChannel.get("channelName"));
+        console.log(selectedChannel.get("channelTitle"));
       }
     });
 

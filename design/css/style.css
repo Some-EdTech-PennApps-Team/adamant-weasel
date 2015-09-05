@@ -1,4 +1,6 @@
-*{font-family:Avenir Next;}
+*{
+	font-family: Avenir Next;
+}
 
 .btn-default {
 	background-color: #5C51A6;
@@ -40,4 +42,145 @@
 	border-color: #979797;
 	color: #979797;
 	opacity: 0.5;
+}
+
+#class-selection {
+	background-color: #F3F3F3;
+	height: 100%;
+	margin-top: -20px;
+}
+
+.class-selection-container {
+	padding-top: 20px;
+}
+
+.classes-header {
+	font-size: 20px;
+	color: #979797;
+	padding-top: 40px;
+}
+
+.class-button {
+	text-decoration: none;
+	color: #63626B;
+}
+
+.class-element:hover {
+	text-decoration: none; 
+	color: #ffffff;
+	background-color: #5C51A6;
+}
+
+.active .class-element {
+	text-decoration: none; 
+	color: #ffffff;
+	background-color: #5C51A6;	
+}
+
+.class-button:hover{
+	text-decoration: none;
+}
+
+.class-element {
+	width: 240px;
+	height: 50px;
+	background-color: #D8D8D8;
+	border-color: #979797;
+	border-radius: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.class-name {
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 6px;
+}
+
+.class-data {
+	font-size: 12px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+.add-class-link {
+	color: #979797;
+}
+
+.add-class-link:hover {
+	color: #5C51A6;
+	text-decoration: none;
+}
+
+.class-name-header {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.edit-class-link {
+	color: #333;
+	text-decoration: none;
+}
+
+.edit-class-link:hover {
+	color: #5C51A6;
+	text-decoration: none;
+}
+
+.challenge-button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.challenge-box {
+	width: 100%;	
+	background-color: #F0F0F0;
+	height: 200px;
+	border-radius: 5px;
+	color: #333;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.challenge-box:hover {
+	background-color: #5C51A6;
+	opacity: 1.0 !important;
+	color: #ffffff;
+}
+
+.inactive .challenge-box {
+	opacity: 0.5;
+}
+
+a .challenge-box-button {
+	text-decoration: none;
+}
+
+.challenge-box-button:hover {
+	text-decoration: none;
+}
+
+.challenge-title {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.challenge-subhead {
+	font-weight: 500;
+}
+
+.challenge-description {
+	padding-top: 5px;
+	font-size: 13px;
+}
+
+.challenge-details {
+	width: 90%;
 }

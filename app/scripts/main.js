@@ -50,6 +50,7 @@ require([
 
     var newChallenge = new NewChallenge({});
     $('#content').append(newChallenge.el);
+
     /*
     var newchallenge = new Newchallenge({});
     $('#content').append(newchallenge.el);
