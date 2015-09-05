@@ -39,13 +39,17 @@ require([
     'backbone',
     'jquery',
     'parse-js-sdk',
-    'views/dashboard'
-], function (Backbone, $, Parse, Dashboard) {
+    'views/dashboard',
+    'views/newChallenge'
+], function (Backbone, $, Parse, Dashboard, NewChallenge) {
 
     Parse.initialize("ETWHMUaqa2oIHO6Mci3DOzi5BFgOb5PmrsR5HBg6", "X9aWYRAXrLzVfqXG7uMboGOLoQsl3q4Rhh1mzCZZ");
 
     var dashboard = new Dashboard({});
     $('#content').append(dashboard.el);
+
+    var newChallenge = new NewChallenge({});
+    $('#content').append(newChallenge.el);
     /*
     var newchallenge = new Newchallenge({});
     $('#content').append(newchallenge.el);

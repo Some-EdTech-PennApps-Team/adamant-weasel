@@ -1,1 +1,31 @@
-<p>Amazing</p>
+
+<h1>Create Challenge <small>Create a new challenge for your students to complete.</small></h1>
+<hr>
+
+<form>
+	<div class="form-group">
+		<label for="challengeClass">Class Challenge Will Be In <span class="required">*</span></label>
+		<select class="form-control" id="channelSelect">
+      <% _(channels).each(function(channel) { %>
+          <option value="<%= channel.objectId %>"><%= channel.channelName  %></option>
+      <% }); %>
+     </select>
+	</div>
+
+	<div class="form-group">
+		<label for="challengeName">Challenge Name <span class="required">*</span></label>
+		<input type="text" class="form-control" id="challengeTitle" placeholder="">
+	</div>
+
+	<div class="form-group">
+		<label for="challengeDescription">Challenge Description</label>
+		<textarea class="form-control" id="promptText" rows="3"></textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="challengeFileInput">Upload Challenge Image</label>
+		<input type="file" id="promptImage">
+	</div>
+
+	<button type="submit" id="submit-challenge" class="btn btn-default">Submit</button>
+</form>
