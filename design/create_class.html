@@ -30,8 +30,8 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Dashboard</a></li>
-						<li><a href="create_class.html">Create Class</a></li>					
+						<li><a href="index.html">Dashboard</a></li>					
+						<li class="active"><a href="create_class.html">Create Class</a></li>					
 						<li><a href="create_challenge.html">Create Challenge</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
@@ -41,32 +41,24 @@
 
 		<div class="container">
 
-			<h1>Create Challenge <small>Create a new challenge for your students to complete.</small></h1>
+			<h1>Create Class <small>Create a new class section using the form below.</small></h1>
 			<hr>
 
 			<form>
+
 				<div class="form-group">
-					<label for="challengeClass">Class Challenge Will Be In <span class="required">*</span></label>
-					<select class="form-control" id="challengeClass">
-					 	<option>Class 1</option>
-					 	<option>Class 2</option>
-					 	<option>Class 3</option>
-					</select>     				
+					<label for="className">Class Name <span class="required">*</span></label>
+					<input type="text" class="form-control" id="className" placeholder="">
 				</div>
 
 				<div class="form-group">
-					<label for="challengeName">Challenge Name <span class="required">*</span></label>
-					<input type="text" class="form-control" id="challengeName" placeholder="">
+					<label for="studentEmail1">Student Email Address to Add</label>
+					<input type="text" class="form-control" id="studentEmail1" placeholder="">
 				</div>
 
-				<div class="form-group">
-					<label for="challengeDescription">Challenge Description</label>
-					<textarea class="form-control" rows="3"></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="challengeFileInput">Upload Challenge Image</label>
-					<input type="file" id="challengeFileInput">
+				<div class="form-group grayed-out">
+					<label for="studentEmail2">Student Email Address to Add</label>
+					<input type="text" class="form-control" id="studentEmail2" placeholder="">
 				</div>
 
 				<button type="submit" class="btn btn-default">Submit</button>
