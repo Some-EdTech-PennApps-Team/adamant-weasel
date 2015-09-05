@@ -104,3 +104,22 @@
 	padding-left: 9px;
 	padding-right: 9px;
 }
+
+.add-class-link {
+	color: #979797;
+}
+
+.add-class-link:hover {
+	color: #5C51A6;
+	text-decoration: none;
+}
+
+.class-name-header {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.edit-class-link {
+	color: black;
+	text-decoration: none;
+}
