@@ -36,7 +36,19 @@ require.config({
 });
 
 require([
-    'backbone'
-], function (Backbone) {
-    Backbone.history.start();
+    'backbone',
+    'jquery',
+    'parse-js-sdk',
+    'views/dashboard'
+], function (Backbone, $, Parse, Dashboard) {
+
+    Parse.initialize("ETWHMUaqa2oIHO6Mci3DOzi5BFgOb5PmrsR5HBg6", "X9aWYRAXrLzVfqXG7uMboGOLoQsl3q4Rhh1mzCZZ");
+
+    var dashboard = new Dashboard({});
+    $('#content').append(dashboard.el);
+    /*
+    var newchallenge = new Newchallenge({});
+    $('#content').append(newchallenge.el);
+     */
+
 });
