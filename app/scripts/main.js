@@ -40,16 +40,22 @@ require([
     'jquery',
     'parse-js-sdk',
     'views/dashboard',
-    'views/newChallenge'
-], function (Backbone, $, Parse, Dashboard, NewChallenge) {
+    'views/newChallenge',
+    'routes/router',
+], function (Backbone, $, Parse, Dashboard, NewChallenge, AppRouter) {
 
     Parse.initialize("ETWHMUaqa2oIHO6Mci3DOzi5BFgOb5PmrsR5HBg6", "X9aWYRAXrLzVfqXG7uMboGOLoQsl3q4Rhh1mzCZZ");
 
-    var dashboard = new Dashboard({});
-    $('#content').append(dashboard.el);
+    var appRouter = new AppRouter();
+  
+    Parse.history.start();
 
-    var newChallenge = new NewChallenge({});
-    $('#content').append(newChallenge.el);
+
+    // var dashboard = new Dashboard({});
+    // $('#content').append(dashboard.el);
+
+    // var newChallenge = new NewChallenge({});
+    // $('#content').append(newChallenge.el);
 
     /*
     var newchallenge = new Newchallenge({});

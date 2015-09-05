@@ -53,12 +53,14 @@ define([
         var promptImage = this.$('#promptImage').val();
         var channelId = this.$('#channelSelect').val();
         var selectedChannel = self.channels.get(channelId);
-        
+        var expires = new Date(new Date(Date.now()).getTime() + 60 * 60 * 24 * 1000);
+
         var Challenge =Parse.Object.extend("Challenge");
         var challenge = new Challenge();
         challenge.set('challengeTitle', challengeTitle);
         challenge.set('promptText', promptText);
         challenge.set('channel', selectedChannel);
+        challenge.set('expires', expires);
 
         challenge.save( null, {
           success: function(result) {
@@ -108,13 +110,9 @@ define([
         var channelId = this.$('#channelSelect').val();
         var selectedChannel =this.channels.get(channelId);
 
-        console.log(channelId);
-        console.log(selectedChannel);
-
         this.$("#title-preview").html(challengeTitle);
         this.$("#prompt-preview").html(promptText);
-        this.$("#channel-preview").html(selectedChannel.get("channelName"));
-        console.log(selectedChannel.get("channelTitle"));
+        this.$("#channel-preview").html(selectedChannel.get("channelName")); 
       }
     });
 

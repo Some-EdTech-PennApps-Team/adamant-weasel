@@ -2,8 +2,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstr
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 
-$preview-left-margin: 50px;
-$preview-screensize: 230px;
+$preview-left-margin: 100px;
+$preview-screensize: 210px;
 /* Custom Style.css from design */
 *{font-family:Avenir Next;}
 
@@ -51,34 +51,37 @@ $preview-screensize: 230px;
 /* END Custom Style.css from design */
 
 .iphone-frame {
-	height: 650px;
+	height: 570px;
 	position: absolute;
 	top: 0;
-	left: 25px;
+	left: 85px;
+	padding-bottom: 50px;
 }
 
 .channel-preview {
 	margin-left: $preview-left-margin;
-	margin-top: 100px;
+	margin-top: 75px;
 	text-align: center;
 	max-width: $preview-screensize;
+	font-size: 14px;
 }
 
 .title-preview {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	margin-left: $preview-left-margin;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .image-preview {
-	max-width: 230px;
-	max-height: 180px;
+	max-width: 205px;
+	max-height: 150px;
 	margin-left: $preview-left-margin;
 }
 
 .prompt-preview {
 	margin-top: 15px;
+	font-size: 14px;
 	max-width: $preview-screensize;
 	margin-left: $preview-left-margin;
 }
