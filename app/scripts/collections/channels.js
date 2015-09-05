@@ -3,12 +3,12 @@
 define([
     'underscore',
     'parse-js-sdk',
-    'models/channels'
-], function (_, Parse, ChannelsModel) {
+    'models/channel'
+], function (_, Parse, Channel) {
     'use strict';
 
     var ChannelsCollection = Parse.Collection.extend({
-        model: Channels
+        model: Channel
     });
 
     return ChannelsCollection;

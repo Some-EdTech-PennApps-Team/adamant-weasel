@@ -8,7 +8,7 @@ define([
 
     var ChallengesModel = Parse.Object.extend({
 
-       className: 'Challenges',
+       className: 'Challenge',
 
         url: '',
 

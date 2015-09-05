@@ -3,12 +3,18 @@
 define([
     'underscore',
     'parse-js-sdk',
-    'models/challenges'
-], function (_, Parse, ChallengesModel) {
+    'models/challenge'
+], function (_, Parse, Challenge) {
     'use strict';
 
     var ChallengesCollection = Parse.Collection.extend({
-        model: Challenges
+        model: Challenge,
+
+        initialize: function(){
+          this.query = new Parse.Query('Challenge');
+          this.fetch();
+        }
+
     });
 
     return ChallengesCollection;

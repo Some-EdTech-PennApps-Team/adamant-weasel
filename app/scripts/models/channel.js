@@ -8,7 +8,7 @@ define([
 
     var ChannelsModel = Parse.Object.extend({
 
-        className: 'Channels',
+        className: 'Channel',
 
         url: '',
 

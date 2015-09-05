@@ -6,8 +6,9 @@ define([
     'parse-js-sdk',
     'templates',
     'collections/channels',
-    'collections/challenges'
-], function ($, _, Parse, JST, Channels, Challenges) {
+    'collections/challenges',
+    'views/challengeElement'
+], function ($, _, Parse, JST, Channels, Challenges, ChallengeElement) {
     'use strict';
 
     var DashboardView = Parse.View.extend({
@@ -22,18 +23,31 @@ define([
         events: {},
 
         initialize: function () {
-            this.render();
+            _.bindAll(this, 'render', 'addOne', 'addAll');
+            //this.render();
 
-            var queryChannels = new Parse.Query(Channels);
-            var queryChallenges = new Parse.Query(Challenges);
-
-
-
+            this.collection = new Challenges({});
+            this.collection.bind('reset', this.render);
 
         },
 
+        addOne: function (challenge) {
+            var challengeElement = new ChallengeElement({model:challenge})
+            this.$('#challenges').append(challengeElement.el);
+        },
+
+        addAll: function () {
+            var self = this;
+            this.collection.each(function(challenge){
+                self.addOne(challenge);
+            })
+        },
+
+
         render: function () {
             this.$el.html(this.template());
+            this.addAll();
+            console.log(this.collection);
         }
     });
 
