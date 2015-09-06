@@ -90,8 +90,10 @@ $preview-screensize: 210px;
 }
 
 .class-element {
-	width: 240px;
-	height: 50px;
+	width: 95%;
+	min-height: 50px;
+	height: auto;
+	max-height: 100px;
 	background-color: #D8D8D8;
 	border-color: #979797;
 	border-radius: 4px;
@@ -281,4 +283,21 @@ a .challenge-box-button {
 	margin-right: 15px;
 }
 
+/* General Design Improvements Classes */
 
+.class-button {
+	max-width: 100%;
+}
+.addChallengeButton {
+	float: right;
+	margin-top: -40px;
+}
+@media (max-width: 992px) {
+	.channelDetails {
+		padding-top: 25px;
+	}
+	.addChallengeButton {
+		float: none;
+		margin-top: 0;
+	}
+}

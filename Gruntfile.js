@@ -181,19 +181,19 @@ module.exports = function (grunt) {
                 }
             }
         },
-        useminPrepare: {
+        /*useminPrepare: {
             html: '<%= yeoman.app %>/index.html',
             options: {
                 dest: '<%= yeoman.dist %>'
             }
-        },
-        usemin: {
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
-            options: {
-                dirs: ['<%= yeoman.dist %>']
-            }
-        },
+        }, */
+        //usemin: {
+            //html: ['<%= yeoman.dist %>/{,*/}*.html'],
+            //css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+            //options: {
+            //    dirs: ['<%= yeoman.dist %>']
+            //}
+        //},
         imagemin: {
             dist: {
                 files: [{

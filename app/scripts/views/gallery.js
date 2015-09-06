@@ -24,7 +24,7 @@ define([
 
         initialize: function (options) {
             _.bindAll(this, 'render','addAll');
-            
+
             var self = this;
             self.challengeId = options.challengeId;
 
