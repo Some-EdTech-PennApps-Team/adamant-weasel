@@ -6,11 +6,8 @@ define([
 ], function (_, Parse) {
     'use strict';
 
-    var ChallengesModel = Parse.Object.extend({
-
-       className: 'Challenge',
-
-        // url: '',
+    var SubmissionModel = Parse.Object.extend('ChallengeSubmission', {
+        url: '',
 
         initialize: function() {
         },
@@ -26,5 +23,5 @@ define([
         }
     });
 
-    return ChallengesModel;
+    return SubmissionModel;
 });

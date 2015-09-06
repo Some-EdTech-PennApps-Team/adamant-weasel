@@ -9,7 +9,8 @@
     "requirejs": "~2.1.10",
     "requirejs-text": "~2.0.10",
     "modernizr": "~2.7.1",
-    "parse-js-sdk": "~1.4.2"
+    "parse-js-sdk": "~1.4.2",
+    "isotope": "~2.2.2"
   },
   "devDependencies": {
     "chai": "~3.2.0",

@@ -28,7 +28,7 @@ define([
 
       initialize: function (options) {
         //this.listenTo(this.model, 'change', this.render);
-        _.bindAll(this, 'render', 'submitChallenge');
+        _.bindAll(this, 'render', 'submitChallenge', 'updateImage', 'saveImage', 'updatePreview');
         
         this.channels = new Channels({});
         this.channels.bind('reset', this.render);
@@ -36,7 +36,6 @@ define([
       },
 
       render: function () {
-        
         var channels = this.channels.toJSON();
         this.$el.html(this.template({
           channels: channels
@@ -82,7 +81,6 @@ define([
 
           promptImageFile.save().then(function(savedFile) { 
             var img = '<img class="image-preview" src="'+savedFile.url()+'" />';
-            console.log("IMG", img);
             self.$('#imagePreview').append(img);
           });
         };

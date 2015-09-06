@@ -25,6 +25,7 @@ require.config({
        chai: '../bower_components/chai/chai',
        lodash: '../bower_components/lodash/dist/lodash.compat',
        mocha: '../bower_components/mocha/mocha',
+       'isotope': '../bower_components/isotope/dist/isotope.pkgd.min',
        modernizr: '../bower_components/modernizr/modernizr',
        'parse-js-sdk': '../bower_components/parse-js-sdk/lib/parse',
        requirejs: '../bower_components/requirejs/require',
@@ -41,7 +42,7 @@ require([
     'parse-js-sdk',
     'views/dashboard',
     'views/newChallenge',
-    'routes/router',
+    'routes/router'
 ], function (Backbone, $, Parse, Dashboard, NewChallenge, AppRouter) {
 
     Parse.initialize("ETWHMUaqa2oIHO6Mci3DOzi5BFgOb5PmrsR5HBg6", "X9aWYRAXrLzVfqXG7uMboGOLoQsl3q4Rhh1mzCZZ");
@@ -49,17 +50,5 @@ require([
     var appRouter = new AppRouter();
   
     Parse.history.start();
-
-
-    // var dashboard = new Dashboard({});
-    // $('#content').append(dashboard.el);
-
-    // var newChallenge = new NewChallenge({});
-    // $('#content').append(newChallenge.el);
-
-    /*
-    var newchallenge = new Newchallenge({});
-    $('#content').append(newchallenge.el);
-     */
 
 });

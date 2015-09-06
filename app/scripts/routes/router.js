@@ -4,21 +4,20 @@ define([
     'jquery',
     'parse-js-sdk',
     'views/newChallenge',
-    'views/dashboard'
-], function ($, Parse, NewChallenge, Dashboard) {
+    'views/dashboard',
+    'views/gallery'
+], function ($, Parse, NewChallenge, Dashboard, Gallery) {
     'use strict';
 
     var AppRouter = Parse.Router.extend({
 	    routes: {
 	      "": "home",
-	      "create": "createChallenge"
+	      "create": "createChallenge",
+	      "gallery/:challengeId": "gallery"
 	    },
 
 	    initialize: function() {
-	      // this.navBarView = new NavBarView({
-	      //   el: $("#nav-bar-container")
-	      // });
-	      // this.navBarView.bind("userLogOut", this.navigateSkills, this);
+
 	    },
 
 	    home: function() {
@@ -33,12 +32,20 @@ define([
 	    	$("#content").append(this.view.el);
 	    },
 
+      gallery: function(challengeId){
+	    	this._cleanUp();
+	    	this.view = new Gallery({
+	    		challengeId: challengeId
+	    	});
+	    	$("#content").append(this.view.el);
+      },
+
 	    _cleanUp: function() {
         if(this.view) {
           this.view.remove();
         	this.view = null;
       	}
-      }   
+      },
   	});
 
     return AppRouter;

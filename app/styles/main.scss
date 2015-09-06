@@ -131,8 +131,70 @@ $preview-screensize: 210px;
 	color: black;
 	text-decoration: none;
 }
+.edit-class-link:hover {
+	color: #5C51A6;
+	text-decoration: none;
+}
+
+.challenge-button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.challenge-box {
+	width: 100%;
+	background-color: #F0F0F0;
+	height: 200px;
+	border-radius: 5px;
+	color: #333;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.challenge-box:hover {
+	background-color: #5C51A6;
+	opacity: 1.0 !important;
+	color: #ffffff;
+}
+
+.inactive .challenge-box {
+	opacity: 0.5;
+}
+
+a .challenge-box-button {
+	text-decoration: none;
+}
+
+.challenge-box-button:hover {
+	text-decoration: none;
+}
+
+.challenge-title {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.challenge-subhead {
+	font-weight: 500;
+}
+
+.challenge-description {
+	padding-top: 5px;
+	font-size: 13px;
+}
+
+.challenge-details {
+	width: 90%;
+}
+
 /* END Custom Style.css from design */
 
+/* START iOS preview */
 .iphone-frame {
 	height: 570px;
 	position: absolute;
@@ -167,6 +229,27 @@ $preview-screensize: 210px;
 	font-size: 14px;
 	max-width: $preview-screensize;
 	margin-left: $preview-left-margin;
+}
+
+.grid {
+	width: 100%;
+}
+
+.grid-item {
+	width: 33.33333%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.submission-image {
+	width: 100%;
+	border: 5px;
+	border-radius: 5px;
+	padding-bottom: 5px;
+}
+
+.submission-caption {
+	font-size: 12px;
 }
 
 
