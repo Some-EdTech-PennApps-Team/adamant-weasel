@@ -8,7 +8,7 @@ define([
 ], function ($, _, Parse, JST) {
     'use strict';
 
-    var GallerySingleView = Backbone.View.extend({
+    var GallerySingleView = Parse.View.extend({
         template: JST['app/scripts/templates/gallerySingle.ejs'],
 
         tagName: 'div',

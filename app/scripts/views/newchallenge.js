@@ -32,7 +32,6 @@ define([
         
         this.channels = new Channels({});
         this.channels.bind('reset', this.render);
-
       },
 
       render: function () {
