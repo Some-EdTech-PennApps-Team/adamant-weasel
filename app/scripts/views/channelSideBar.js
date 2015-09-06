@@ -57,14 +57,14 @@ define([
       },
 
       firstLoad: function() {
-        this.trigger("channelsLoaded", this.channelCollection);
+        this.trigger('channelsLoaded', this.channelCollection);
         this.addAllChannels();
       },
 
       setActive: function(activeObjectId) {
         this.activeChannelId = activeObjectId;
         var activeChannel = this.channelCollection.get(activeObjectId);
-        this.trigger("selectChannel", activeChannel);
+        this.trigger('selectChannel', activeChannel);
         this.addAllChannels();
       },
 

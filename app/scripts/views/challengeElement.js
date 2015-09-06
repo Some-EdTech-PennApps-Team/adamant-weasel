@@ -19,7 +19,7 @@ define([
 
         events: {},
 
-        initialize: function (options) {
+        initialize: function () {
             if (this.model){
               this.render();
             }

@@ -30,8 +30,8 @@ define([
             _.bindAll(this, 'render', 'addOne', 'addAll', 'changeChannel', 'channelsLoaded');
 
             this.channelSideBarView = new ChannelSideBar({});
-            this.channelSideBarView.bind("channelsLoaded", this.channelsLoaded);
-            this.channelSideBarView.bind("selectChannel", this.changeChannel);
+            this.channelSideBarView.bind('channelsLoaded', this.channelsLoaded);
+            this.channelSideBarView.bind('selectChannel', this.changeChannel);
         },
 
         addOne: function (challenge) {
@@ -49,7 +49,7 @@ define([
           }
           
           self.challengeCollection.each(function(challenge){
-            if (challenge.get("channel").id === self.activeChannel.id) {
+            if (challenge.get('channel').id === self.activeChannel.id) {
               self.addOne(challenge);  
             }
           });
@@ -78,7 +78,7 @@ define([
 
           if (!self.activeChannel) {
             self.activeChannel = self.channels.at(0);
-          };
+          }
 
           this.$el.html(this.template({
             channel: self.activeChannel.toJSON()

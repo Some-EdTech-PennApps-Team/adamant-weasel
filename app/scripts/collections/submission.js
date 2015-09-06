@@ -12,14 +12,14 @@ define([
 
         initialize: function(options) {
         	this.challengeId = options.challengeId;
-        	console.log("CI", this.challengeId);
-        	var Challenge = Parse.Object.extend("Challenge");
+        	console.log('CI', this.challengeId);
+        	var Challenge = Parse.Object.extend('Challenge');
         	var challenge = new Challenge({});
         	challenge.id = this.challengeId;
 
         	this.query = new Parse.Query('ChallengeSubmission');
-          this.query.equalTo("challenge", challenge);
-          this.query.include("user");
+          this.query.equalTo('challenge', challenge);
+          this.query.include('user');
           this.fetch();
         }
     });

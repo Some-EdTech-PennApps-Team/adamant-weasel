@@ -11,9 +11,9 @@ define([
 
     var AppRouter = Parse.Router.extend({
 	    routes: {
-	      "": "home",
-	      "create": "createChallenge",
-	      "gallery/:challengeId": "gallery"
+	      '': 'home',
+	      'create': 'createChallenge',
+	      'gallery/:challengeId': 'gallery'
 	    },
 
 	    initialize: function() {
@@ -23,13 +23,13 @@ define([
 	    home: function() {
 				this._cleanUp();
 	    	this.view = new Dashboard({});
-	    	$("#content").append(this.view.el);
+	    	$('#content').append(this.view.el);
 	    },
 
 	    createChallenge: function() {
 	    	this._cleanUp();
 	    	this.view = new NewChallenge({});
-	    	$("#content").append(this.view.el);
+	    	$('#content').append(this.view.el);
 	    },
 
       gallery: function(challengeId){
@@ -37,7 +37,7 @@ define([
 	    	this.view = new Gallery({
 	    		challengeId: challengeId
 	    	});
-	    	$("#content").append(this.view.el);
+	    	$('#content').append(this.view.el);
       },
 
 	    _cleanUp: function() {

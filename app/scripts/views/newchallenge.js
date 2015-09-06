@@ -23,10 +23,10 @@ define([
         'change #promptImage': 'updateImage',
         'change #challengeTitle': 'updatePreview',
         'change #promptText': 'updatePreview',
-        'change #promptText': 'updatePreview'
+        'change #channelSelect': 'updatePreview'
       },
 
-      initialize: function (options) {
+      initialize: function () {
         //this.listenTo(this.model, 'change', this.render);
         _.bindAll(this, 'render', 'submitChallenge', 'updateImage', 'saveImage', 'updatePreview');
         
@@ -48,12 +48,11 @@ define([
 
         var challengeTitle = this.$('#challengeTitle').val();
         var promptText = this.$('#promptText').val();
-        var promptImage = this.$('#promptImage').val();
         var channelId = this.$('#channelSelect').val();
         var selectedChannel = self.channels.get(channelId);
         var expires = new Date(new Date(Date.now()).getTime() + 60 * 60 * 24 * 1000);
 
-        var Challenge =Parse.Object.extend("Challenge");
+        var Challenge =Parse.Object.extend('Challenge');
         var challenge = new Challenge();
         challenge.set('challengeTitle', challengeTitle);
         challenge.set('promptText', promptText);
@@ -72,7 +71,7 @@ define([
 
       updateImage: function() {
         var self = this;
-        var fileUploadControl = this.$("#promptImage")[0];
+        var fileUploadControl = this.$('#promptImage')[0];
         if (fileUploadControl.files.length > 0) {
           var file = fileUploadControl.files[0];
           var name = file.name;
@@ -82,12 +81,11 @@ define([
             var img = '<img class="image-preview" src="'+savedFile.url()+'" />';
             self.$('#imagePreview').append(img);
           });
-        };
+        }
       },
 
       saveImage: function(challenge){
-        var self = this;
-        var fileUploadControl = this.$("#promptImage")[0];
+        var fileUploadControl = this.$('#promptImage')[0];
         if (fileUploadControl.files.length > 0) {
           var file = fileUploadControl.files[0];
           var name = file.name;
@@ -103,13 +101,12 @@ define([
       updatePreview: function() {
         var challengeTitle = this.$('#challengeTitle').val();
         var promptText = this.$('#promptText').val();
-        var promptImage = this.$('#promptImage').val();
         var channelId = this.$('#channelSelect').val();
         var selectedChannel =this.channels.get(channelId);
 
-        this.$("#title-preview").html(challengeTitle);
-        this.$("#prompt-preview").html(promptText);
-        this.$("#channel-preview").html(selectedChannel.get("channelName")); 
+        this.$('#title-preview').html(challengeTitle);
+        this.$('#prompt-preview').html(promptText);
+        this.$('#channel-preview').html(selectedChannel.get('channelName')); 
       }
     });
 

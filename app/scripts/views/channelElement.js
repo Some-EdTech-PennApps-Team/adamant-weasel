@@ -18,17 +18,17 @@ define([
         className: '',
 
         events: {
-            "click .class-button": "clickedChannel"
+            'click .class-button': 'clickedChannel'
         },
 
-        initialize: function (options) {
+        initialize: function () {
             if (this.model){
               this.render();
             }
         },
 
         clickedChannel: function() {
-            this.trigger("selectActive", this.model.id);
+            this.trigger('selectActive', this.model.id);
         },
 
         toggleActive: function(active) {

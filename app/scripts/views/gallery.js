@@ -38,7 +38,7 @@ define([
 
         addOne: function(submission) {
             var gallerySingle = new GallerySingle({model:submission});
-            this.$("#gallery-container").append(gallerySingle.el);
+            this.$('#gallery-container').append(gallerySingle.el);
         },
 
         addAll: function(){
@@ -54,12 +54,6 @@ define([
               layoutMode: 'masonry'
             });
 
-            // var iso = new Isotope( '.grid', {
-            //     itemSelector: '.grid-item',
-            //     masonry: {
-            //         columnWidth: 200
-            //     }
-            // });
         }
     });
 

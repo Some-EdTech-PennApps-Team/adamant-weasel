@@ -24,7 +24,7 @@ define([
         },
 
         render: function () {
-            var url = this.model.get("submissionImage").url();
+            var url = this.model.get('submissionImage').url();
             var user = this.model.get('user');
             // console.log("USER", user);
             this.$el.html(this.template({
