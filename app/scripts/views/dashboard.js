@@ -61,8 +61,6 @@ define([
           self.activeChannel = channel; 
           self.render();
           self.addAll();
-          
-
         },
 
         channelsLoaded: function(channels) {
@@ -80,8 +78,11 @@ define([
             self.activeChannel = self.channels.at(0);
           }
 
+          var url = self.activeChannel.get("channelImage").url();
+          
           this.$el.html(this.template({
-            channel: self.activeChannel.toJSON()
+            channel: self.activeChannel.toJSON(),
+            url:url
           }));
 
           this.$('#class-selection').empty();

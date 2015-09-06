@@ -25,7 +25,7 @@ require.config({
       chai: '../bower_components/chai/chai',
       lodash: '../bower_components/lodash/dist/lodash.compat',
       mocha: '../bower_components/mocha/mocha',
-      isotope: '../bower_components/isotope/js/isotope',
+      // isotope: '../bower_components/isotope/js/isotope',
       modernizr: '../bower_components/modernizr/modernizr',
       'parse-js-sdk': '../bower_components/parse-js-sdk/lib/parse',
       requirejs: '../bower_components/requirejs/require',

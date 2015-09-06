@@ -216,6 +216,7 @@ a .challenge-box-button {
 	font-weight: bold;
 	margin-left: $preview-left-margin;
 	margin-top: 10px;
+	max-width: $preview-screensize;
 }
 
 .image-preview {
@@ -231,14 +232,26 @@ a .challenge-box-button {
 	margin-left: $preview-left-margin;
 }
 
+// .grid {
+// 	width: 100%;
+// }
+
+// .grid-item {
+// 	width: 33.33333%;
+// 	padding: 10px;
+// 	border-radius: 5px;
+// }
+
 .grid {
-	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .grid-item {
-	width: 33.33333%;
-	padding: 10px;
-	border-radius: 5px;
+	// flex-basis: 200px;
+	max-width: 250px;
+	margin: 0 10px;
 }
 
 .submission-image {
@@ -250,6 +263,22 @@ a .challenge-box-button {
 
 .submission-caption {
 	font-size: 12px;
+}
+
+.success {
+	background-color: #5C51A6;
+	height: 60px;
+	text-align: center;
+	font-size: 24px;
+	margin: 10px auto;
+	color: white;
+	padding-top: 10px;
+}
+
+.channel-icon {
+	float: left;
+	height: 50px;
+	margin-right: 15px;
 }
 
 

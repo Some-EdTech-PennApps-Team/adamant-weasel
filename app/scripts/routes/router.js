@@ -17,7 +17,7 @@ define([
 	    },
 
 	    initialize: function() {
-
+	    	_.bindAll(this, "navigateHome");
 	    },
 
 	    home: function() {
@@ -29,6 +29,7 @@ define([
 	    createChallenge: function() {
 	    	this._cleanUp();
 	    	this.view = new NewChallenge({});
+	    	this.view.bind("saveSuccess", this.navigateHome);
 	    	$('#content').append(this.view.el);
 	    },
 
@@ -38,6 +39,10 @@ define([
 	    		challengeId: challengeId
 	    	});
 	    	$('#content').append(this.view.el);
+      },
+
+      navigateHome: function(){
+      	this.navigate("", true);
       },
 
 	    _cleanUp: function() {

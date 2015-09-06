@@ -64,7 +64,7 @@ module.exports = function (grunt) {
             options: {
                 port: grunt.option('port') || SERVER_PORT,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -112,18 +112,18 @@ module.exports = function (grunt) {
             dist: ['.tmp', '<%= yeoman.dist %>/*'],
             server: '.tmp'
         },
-        // jshint: {
-        //     options: {
-        //         jshintrc: '.jshintrc',
-        //         reporter: require('jshint-stylish')
-        //     },
-        //     all: [
-        //         'Gruntfile.js',
-        //         '<%= yeoman.app %>/scripts/{,*/}*.js',
-        //         '!<%= yeoman.app %>/scripts/vendor/*',
-        //         'test/spec/{,*/}*.js'
-        //     ]
-        // },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: [
+                'Gruntfile.js',
+                '<%= yeoman.app %>/scripts/{,*/}*.js',
+                '!<%= yeoman.app %>/scripts/vendor/*',
+                'test/spec/{,*/}*.js'
+            ]
+        },
         mocha: {
             all: {
                 options: {
@@ -161,14 +161,14 @@ module.exports = function (grunt) {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
                 options: {
                     baseUrl: '<%= yeoman.app %>/scripts',
-                    optimize: 'uglify',
+                    optimize: 'none',
                     paths: {
                         'templates': '../../.tmp/scripts/templates',
                         'jquery': '../../<%= yeoman.app %>/bower_components/jquery/dist/jquery',
                         'underscore': '../../<%= yeoman.app %>/bower_components/lodash/dist/lodash',
                         'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone'
                     },
-                    
+
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
                     //generateSourceMaps: true,

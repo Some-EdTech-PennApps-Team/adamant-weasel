@@ -28,7 +28,7 @@ define([
 
       initialize: function () {
         //this.listenTo(this.model, 'change', this.render);
-        _.bindAll(this, 'render', 'submitChallenge', 'updateImage', 'saveImage', 'updatePreview');
+        _.bindAll(this, 'render', 'submitChallenge', 'updateImage', 'saveImage', 'updatePreview', 'saveSuccess');
         
         this.channels = new Channels({});
         this.channels.bind('reset', this.render);
@@ -62,11 +62,23 @@ define([
         challenge.save( null, {
           success: function(result) {
             self.saveImage(result);
+            self.saveSuccess();
           },
           error: function() {
 
           }
         });
+      },
+
+      saveSuccess: function() {
+        var self = this;
+        this.$('#feedback').append('<div class="success">Challenge Created</div>').hide().fadeIn(250);
+        setTimeout(
+         function() 
+        {
+          self.trigger("saveSuccess");
+        }, 750);
+  
       },
 
       updateImage: function() {
